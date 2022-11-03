@@ -1,5 +1,5 @@
 @import url(./reset.css);
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');
 
 @font-face {
   font-family: 'Segoe UI';
@@ -26,6 +26,7 @@
 
   /* ======== Colors ======== */
   --color-background: #14141480;
+  --color-light-blue: #47476e;
   --color-dark-blue: #343452;
   --color-light-gray: #3b3b3b;
   --color-gray: #292929;
@@ -69,6 +70,7 @@ body {
 
 .main-header {
   grid-area: header;
+  position: relative;
 }
 
 .main-nav {
@@ -92,7 +94,13 @@ body {
 
 /* ======== Header ======== */
 
-.main-header .history {
+.main-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.history {
   width: 60px;
   height: 100%;
   display: flex;
@@ -102,12 +110,87 @@ body {
   opacity: 50%;
 }
 
-.arrow-left:hover,
+.history .arrow-left:hover,
 .arrow-right:hover {
   opacity: 75%;
 }
 
+.search {
+  margin-left: 15.5%;
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  min-width: 100%;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-light-gray);
+  padding: 0.6rem;
+  color: var(--color-white-smoke);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.controls i {
+  margin-right: 1rem;
+  filter: invert(1);
+  color: var(--color-light-gray);
+}
+
+.controls i:hover {
+  filter: invert(0);
+  color: var(--color-light-blue);
+  cursor: pointer;
+}
+
+.controls img {
+  margin-right: 2rem;
+}
+
 /* ======== Nav ======== */
+.nav-boxes {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-boxes .nav-box {
+  max-height: 3.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+}
+
+.nav-boxes .nav-box:hover,
+.nav-boxes .nav-main .nav-box:first-child {
+  background-color: var(--color-gray);
+  cursor: pointer;
+}
+
+.nav-boxes .nav-box i {
+  font-size: var(--text-size-md);
+  margin: 0;
+  filter: invert(1);
+  color: var(--color-light-gray);
+}
+
+.nav-boxes .nav-box:hover i,
+.nav-boxes .nav-main .nav-box:first-child i {
+  filter: invert(0);
+  color: var(--color-light-blue);
+}
+
+.nav-boxes .nav-box p {
+  margin: 0;
+  font-size: var(--text-size-xs);
+}
 
 /* ======== Sidebar ======== */
 .section-header {
@@ -162,7 +245,7 @@ aside .card .card-description p {
 .chat-boxes {
   padding: 0 4%;
   overflow-y: scroll;
-  max-height: 75vh;
+  max-height: 60vh;
 }
 
 .chat-boxes .third-person {
@@ -200,4 +283,37 @@ aside .card .card-description p {
   margin: 1px;
   border-radius: 5px;
   background-color: var(--color-dark-blue);
+}
+
+.new-chat {
+  padding: 3% 6%;
+  margin-left: 2rem;
+  border-top: 1px solid var(--color-black);
+  display: flex;
+  flex-direction: column;
+}
+
+.new-chat input {
+  border: 1px solid var(--color-black);
+  background-color: var(--color-light-gray);
+  padding: 0.6rem;
+  color: var(--color-white-smoke);
+}
+
+.new-chat .chat-tools {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.new-chat .chat-tools i {
+  margin: 0.6rem 0.7rem;
+  filter: invert(1);
+  color: var(--color-light-gray);
+}
+
+.new-chat .chat-tools i:hover {
+  filter: invert(0);
+  color: var(--color-light-blue);
+  cursor: pointer;
 }

@@ -9,17 +9,74 @@
   </head>
   <body>
     <div class="container">
+      <!-- ======== HEADER ========  -->
+
       <header class="main-header">
         <div class="history">
-          <div class="arrow-left"><i class="fa fa-arrow-left"></i></div>
-          <div class="arrow-right"><i class="fa fa-arrow-right"></i></div>
+          <div class="arrow-left"><i class="fa-solid fa-angle-left"></i></div>
+          <div class="arrow-right"><i class="fa-solid fa-angle-right"></i></div>
         </div>
-
-        <div class="search"></div>
-
-        <div class="controler"></div>
+        <div class="search">
+          <input id="search-text" type="text" placeholder="Search" />
+        </div>
+        <div class="controls">
+          <img
+            class="card-img"
+            src="./images/image-can.jpg"
+            alt="profile photo"
+          />
+          <i class="fa-regular fa-window-minimize"></i>
+          <i class="fa-regular fa-window-maximize"></i>
+          <i class="fa-regular fa-rectangle-xmark"></i>
+        </div>
       </header>
-      <nav class="main-nav">Navigation</nav>
+
+      <!-- ======== NAVIGATION ========  -->
+
+      <nav class="main-nav">
+        <div class="nav-boxes">
+          <main class="nav-main">
+            <div class="nav-box">
+              <i class="fa-regular fa-bell"></i>
+              <p>Activity</p>
+            </div>
+            <div class="nav-box">
+              <i class="fa-regular fa-comment"></i>
+              <p>Chat</p>
+            </div>
+            <div class="nav-box">
+              <i class="fa-regular fa-circle-user"></i>
+              <p>Teams</p>
+            </div>
+            <div class="nav-box">
+              <i class="fa-regular fa-calendar"></i>
+              <p>Calendar</p>
+            </div>
+            <div class="nav-box">
+              <i class="fa-solid fa-phone"></i>
+              <p>Calls</p>
+            </div>
+            <div class="nav-box">
+              <i class="fa-regular fa-file"></i>
+              <p>Files</p>
+            </div>
+            <div class="nav-box"><i class="fa-solid fa-ellipsis"></i></div>
+          </main>
+          <footer class="nav-footer">
+            <div class="nav-box">
+              <i class="fa-solid fa-shapes"></i>
+              <p>Apps</p>
+            </div>
+            <div class="nav-box">
+              <i class="fa-solid fa-circle-question"></i>
+              <p>Help</p>
+            </div>
+          </footer>
+        </div>
+      </nav>
+
+      <!-- ======== ASIDE ========  -->
+
       <aside class="main-aside">
         <header class="section-header">
           <h1>Chat</h1>
@@ -96,6 +153,9 @@
           </div>
         </div>
       </aside>
+
+      <!-- ======== MAIN ========  -->
+
       <main class="main-content">
         <header class="section-header">
           <img
@@ -105,7 +165,7 @@
           />
           <h2>Clifford,Daniel</h2>
         </header>
-        <div class="chat-boxes">
+        <main class="chat-boxes">
           <div class="third-person">
             <img
               class="card-img"
@@ -145,9 +205,12 @@
               </p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. at
-                nulla sed saepe odio 
+                nulla sed saepe odio
               </p>
-              <p>Lorem ipsum dolor. at nulla sed saepe odio s at nulla sed saepe odio</p>
+              <p>
+                Lorem ipsum dolor. at nulla sed saepe odio s at nulla sed saepe
+                odio
+              </p>
             </div>
           </div>
           <div class="third-person">
@@ -189,12 +252,40 @@
               </p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. at
-                nulla sed saepe odio 
+                nulla sed saepe odio
               </p>
-              <p>Lorem ipsum dolor. at nulla sed saepe odio s at nulla sed saepe odio</p>
+              <p>
+                Lorem ipsum dolor. at nulla sed saepe odio s at nulla sed saepe
+                odio
+              </p>
             </div>
           </div>
-        </div>
+        </main>
+        <footer class="new-chat">
+          <input
+            id="chat-text"
+            value="chat-text"
+            type="text"
+            placeholder="Type a new message"
+          />
+          <div class="chat-tools">
+            <div class="tools-left">
+              <i class="fa fa-font"></i>
+              <i class="fa fa-exclamation"></i>
+              <i class="fa fa-paperclip"></i>
+              <i class="fa-regular fa-eye"></i>
+              <i class="fa-regular fa-face-smile"></i>
+              <i class="fa-regular fa-file-image"></i>
+              <i class="fa-regular fa-clock"></i>
+              <i class="fa-regular fa-lightbulb"></i>
+              <i class="fa-regular fa-circle-left"></i>
+              <i class="fa-regular fa-gem"></i>
+            </div>
+            <div class="tools-right">
+              <i class="fa-regular fa-paper-plane"></i>
+            </div>
+          </div>
+        </footer>
       </main>
     </div>
   </body>
