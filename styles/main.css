@@ -1,6 +1,22 @@
 @import url(./reset.css);
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: url('./../assets/fonts/Segoe-UI.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Segoe UI Bold';
+  src: url('./../assets/fonts/Segoe-UI-Bold.woff') format('woff');
+}
 
 :root {
+  /* ======== Fonts ======== */
+  --ff-primary: 'Segoe UI', sans-serif;
+  --ff-primary-bold: 'Segoe UI Bold', sans-serif;
+
+  /* ======== Typography ======== */
   --text-size-xxl: 2.5rem;
   --text-size-xl: 2rem;
   --text-size-md: 1.5rem;
@@ -8,12 +24,14 @@
   --text-size-sm: 0.875rem;
   --text-size-xs: 0.75rem;
 
-  /* ## Colors */
+  /* ======== Colors ======== */
   --color-background: #14141480;
-  --color-light-gray: #2d2d2d;
+  --color-dark-blue: #343452;
+  --color-light-gray: #3b3b3b;
   --color-gray: #292929;
   --color-dark-gray: #222222;
   --color-black: #191919;
+  --color-white-smoke: #f5f5f5;
 }
 
 * {
@@ -23,6 +41,8 @@
 html,
 body {
   font-size: var(--text-size-base);
+  font-family: var(--ff-primary);
+  color: var(--color-white-smoke);
 }
 
 body {
@@ -30,46 +50,154 @@ body {
   background-color: var(--color-background);
 }
 
+/* ======== Grid-Layout  ======== */
+
 .container {
   height: 90%;
   width: 90%;
+  max-height: 600px;
+  max-width: 1366px;
   margin: auto;
   display: grid;
   grid-template-areas:
     'header header header'
     'nav sidebar content';
 
-  grid-template-columns: 60px 1fr 4fr;
-  grid-template-rows: 40px 1fr;
+  grid-template-columns: 70px 2fr 6fr;
+  grid-template-rows: 50px 1fr;
 }
 
-header,
-main,
-aside,
-nav {
-  color: white;
-  border: white 1px solid;
-}
-
-header {
+.main-header {
   grid-area: header;
 }
 
-nav {
+.main-nav {
   grid-area: nav;
 }
 
-header,
-nav {
+.main-header,
+.main-nav {
   background: var(--color-black);
 }
 
-main {
+.main-content {
   grid-area: content;
   background: var(--color-gray);
 }
 
-aside {
+.main-aside {
   grid-area: sidebar;
   background: var(--color-dark-gray);
+}
+
+/* ======== Header ======== */
+
+.main-header .history {
+  width: 60px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 50%;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 75%;
+}
+
+/* ======== Nav ======== */
+
+/* ======== Sidebar ======== */
+.section-header {
+  max-height: 5rem;
+  padding-left: 1rem;
+  border-bottom: 2px solid var(--color-black);
+  font-family: var(--ff-primary-bold);
+  font-weight: 800;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.main-aside .card {
+  height: 4rem;
+  overflow: hidden;
+  border-radius: 5px;
+  margin: 3px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--text-size-xs);
+  opacity: 75%;
+  cursor: pointer;
+}
+
+aside .card:nth-child(1),
+aside .card:hover {
+  background-color: var(--color-light-gray);
+  opacity: 100%;
+}
+
+.card-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+aside .card .card-description h4 {
+  margin-bottom: -10px;
+}
+
+aside .card .card-description p {
+  height: var(--text-size-base);
+  overflow: hidden;
+}
+
+/* ======== Main ======== */
+.chat-boxes {
+  padding: 0 4%;
+  overflow-y: scroll;
+  max-height: 75vh;
+}
+
+.chat-boxes .third-person {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  margin-bottom: 1rem;
+}
+
+.chat-boxes .third-person img {
+  margin-top: 10px;
+}
+
+.chat-boxes .third-person .chat-texts p {
+  display: inline-block;
+  padding: 10px;
+  margin: 1px;
+  border-radius: 5px;
+  background: var(--color-light-gray);
+}
+
+.chat-boxes .third-person .chat-texts p span {
+  font-family: var(--ff-primary-bold);
+  font-size: var(--text-size-xs);
+  opacity: 75%;
+}
+
+.chat-boxes .first-person {
+  text-align: end;
+  margin-bottom: 1rem;
+}
+
+.chat-boxes .first-person .chat-texts p {
+  display: inline-block;
+  padding: 10px;
+  margin: 1px;
+  border-radius: 5px;
+  background-color: var(--color-dark-blue);
 }
