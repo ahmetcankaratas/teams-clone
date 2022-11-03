@@ -1,0 +1,75 @@
+@import url(./reset.css);
+
+:root {
+  --text-size-xxl: 2.5rem;
+  --text-size-xl: 2rem;
+  --text-size-md: 1.5rem;
+  --text-size-base: 16px;
+  --text-size-sm: 0.875rem;
+  --text-size-xs: 0.75rem;
+
+  /* ## Colors */
+  --color-background: #14141480;
+  --color-light-gray: #2d2d2d;
+  --color-gray: #292929;
+  --color-dark-gray: #222222;
+  --color-black: #191919;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: var(--text-size-base);
+}
+
+body {
+  height: 100vh;
+  background-color: var(--color-background);
+}
+
+.container {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'nav sidebar content';
+
+  grid-template-columns: 60px 1fr 4fr;
+  grid-template-rows: 40px 1fr;
+}
+
+header,
+main,
+aside,
+nav {
+  color: white;
+  border: white 1px solid;
+}
+
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+header,
+nav {
+  background: var(--color-black);
+}
+
+main {
+  grid-area: content;
+  background: var(--color-gray);
+}
+
+aside {
+  grid-area: sidebar;
+  background: var(--color-dark-gray);
+}
