@@ -28,10 +28,11 @@
   --color-background: #14141480;
   --color-light-blue: #47476e;
   --color-dark-blue: #343452;
+  --color-dark-red: #6d0f17;
   --color-light-gray: #3b3b3b;
-  --color-gray: #292929;
-  --color-dark-gray: #222222;
-  --color-black: #191919;
+  --color-gray: #202020;
+  --color-dark-gray: #131313;
+  --color-black: #0a0a0a;
   --color-white-smoke: #f5f5f5;
 }
 
@@ -57,7 +58,7 @@ body {
   background-attachment: fixed;
 }
 
-/* ======== Grid-Layout  ======== */
+/* ======== Grid-Layout ======== */
 
 .container {
   height: 90%;
@@ -119,6 +120,7 @@ body {
 .history .arrow-left:hover,
 .arrow-right:hover {
   opacity: 75%;
+  cursor: pointer;
 }
 
 .search {
@@ -139,33 +141,40 @@ body {
 .controls {
   display: flex;
   align-items: center;
+  list-style: none;
 }
 
-.controls i {
-  margin-right: 1rem;
-  filter: invert(1);
-  color: var(--color-light-gray);
+.controls .control-box{
+  height: 50px;
+  width: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.controls i:hover {
-  filter: invert(0);
-  color: var(--color-light-blue);
+.controls .control-box:hover{
+  background-color: var(--color-gray);
   cursor: pointer;
 }
 
-.controls img {
-  margin-right: 2rem;
+.controls .control-box:last-child:hover{
+  background-color: var(--color-dark-red)
 }
 
+.controls .control-box i {
+  color: var(--color-light-gray);
+}
+
+
 /* ======== Nav ======== */
-.nav-boxes {
+.main-nav {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.nav-boxes .nav-box {
+.main-nav .nav-box {
   max-height: 3.6rem;
   display: flex;
   flex-direction: column;
@@ -174,26 +183,26 @@ body {
   padding: 0.8rem;
 }
 
-.nav-boxes .nav-box:hover,
-.nav-boxes .nav-main .nav-box:first-child {
+.main-nav .nav-box:hover,
+.main-nav .nav-main .nav-box:first-child {
   background-color: var(--color-gray);
   cursor: pointer;
 }
 
-.nav-boxes .nav-box i {
+.main-nav .nav-box i {
   font-size: var(--text-size-md);
   margin: 0;
   filter: invert(1);
   color: var(--color-light-gray);
 }
 
-.nav-boxes .nav-box:hover i,
-.nav-boxes .nav-main .nav-box:first-child i {
+.main-nav .nav-box:hover i,
+.main-nav .nav-main .nav-box:first-child i {
   filter: invert(0);
   color: var(--color-light-blue);
 }
 
-.nav-boxes .nav-box p {
+.main-nav .nav-box p {
   margin: 0;
   font-size: var(--text-size-xs);
 }
