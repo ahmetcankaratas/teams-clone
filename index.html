@@ -13,30 +13,30 @@
 
       <header class="main-header">
         <div class="history">
-          <div class="arrow-left"><i class="fa-solid fa-angle-left"></i></div>
-          <div class="arrow-right"><i class="fa-solid fa-angle-right"></i></div>
+          <div class="history__arrow-left"><i class="fa-solid fa-angle-left"></i></div>
+          <div class="history__arrow-right"><i class="fa-solid fa-angle-right"></i></div>
         </div>
         <div class="search">
-          <input id="search-text" type="text" placeholder="Search" />
+          <input id="search__text" type="text" placeholder="Search" />
         </div>
         <ul class="controls">
-          <li class="control-box">
+          <li class="control__box">
             <i class="fa-solid fa-ellipsis"></i>
           </li>
-          <li class="control-box">
-          <img
-              class="card-img"
+          <li class="control__box">
+            <img
+              class="profile-image"
               src="./images/image-can.jpg"
               alt="profile photo"
             />
           </li>
-          <li class="control-box">
+          <li class="control__box">
             <i class="fa-regular fa-window-minimize"></i>
           </li>
-          <li class="control-box">
+          <li class="control__box">
             <i class="fa-regular fa-window-maximize"></i>
           </li>
-          <li class="control-box">
+          <li class="control__box">
             <i class="fa-regular fa-rectangle-xmark"></i>
           </li>
         </ul>
@@ -45,86 +45,86 @@
       <!-- ======== NAVIGATION ========  -->
 
       <nav class="main-nav">
-          <main class="nav-main">
-            <div class="nav-box">
-              <i class="fa-regular fa-bell"></i>
-              <p>Activity</p>
-            </div>
-            <div class="nav-box">
-              <i class="fa-regular fa-comment"></i>
-              <p>Chat</p>
-            </div>
-            <div class="nav-box">
-              <i class="fa-regular fa-circle-user"></i>
-              <p>Teams</p>
-            </div>
-            <div class="nav-box">
-              <i class="fa-regular fa-calendar"></i>
-              <p>Calendar</p>
-            </div>
-            <div class="nav-box">
-              <i class="fa-solid fa-phone"></i>
-              <p>Calls</p>
-            </div>
-            <div class="nav-box">
-              <i class="fa-regular fa-file"></i>
-              <p>Files</p>
-            </div>
-            <div class="nav-box"><i class="fa-solid fa-ellipsis"></i></div>
-          </main>
-          <footer class="nav-footer">
-            <div class="nav-box">
-              <i class="fa-solid fa-shapes"></i>
-              <p>Apps</p>
-            </div>
-            <div class="nav-box">
-              <i class="fa-solid fa-circle-question"></i>
-              <p>Help</p>
-            </div>
-          </footer>
+        <ul class="nav-list">
+          <li class="nav-list__box">
+            <i class="fa-regular fa-bell"></i>
+            <p>Activity</p>
+          </li>
+          <li class="nav-list__box">
+            <i class="fa-regular fa-comment"></i>
+            <p>Chat</p>
+          </li>
+          <li class="nav-list__box">
+            <i class="fa-regular fa-circle-user"></i>
+            <p>Teams</p>
+          </li>
+          <li class="nav-list__box">
+            <i class="fa-regular fa-calendar"></i>
+            <p>Calendar</p>
+          </li>
+          <li class="nav-list__box">
+            <i class="fa-solid fa-phone"></i>
+            <p>Calls</p>
+          </li>
+          <li class="nav-list__box">
+            <i class="fa-regular fa-file"></i>
+            <p>Files</p>
+          </li>
+          <li class="nav-list__box"><i class="fa-solid fa-ellipsis"></i></li>
+          <li class="nav-list__box">
+            <i class="fa-solid fa-shapes"></i>
+            <p>Apps</p>
+          </li>
+        </ul>
+        <div class="nav-help">
+          <div class="nav-list__box">
+            <i class="fa-solid fa-circle-question"></i>
+            <p>Help</p>
+          </div>
+        </div>
       </nav>
 
       <!-- ======== ASIDE ========  -->
 
       <aside class="main-aside">
-        <header class="section-header">
+        <header class="sidebar-header">
           <h1>Chat</h1>
         </header>
-        <div class="cards">
-          <div class="card">
+        <ul class="sidebar-list">
+          <li class="sidebar-list__item">
             <img
-              class="card-img"
+              class="profile-image"
               src="./images/image-daniel.jpg"
               alt="profile photo"
             />
-            <div class="card-description">
+            <div class="item__description">
               <h4>Clifford, Daniel</h4>
               <p>
                 I signed up for the free intro course and found it incredibly
                 fun!
               </p>
             </div>
-          </div>
+          </li>
 
-          <div class="card">
+          <li class="sidebar-list__item">
             <img
-              class="card-img"
+              class="profile-image"
               src="./images/image-jeanette.jpg"
               alt="profile photo"
             />
-            <div class="card-description">
+            <div class="item__description">
               <h4>Harmon, Jeanette</h4>
               <p>This was one of the best investments I’ve made in myself.</p>
             </div>
-          </div>
+          </li>
 
-          <div class="card">
+          <li class="sidebar-list__item">
             <img
-              class="card-img"
+              class="profile-image"
               src="./images/image-jonathan.jpg"
               alt="profile photo"
             />
-            <div class="card-description">
+            <div class="item__description">
               <h4>Walters, Jonathan</h4>
               <p>
                 Thank you for the wonderful experience! I now have a job I
@@ -132,56 +132,56 @@
                 love.
               </p>
             </div>
-          </div>
+          </li>
 
-          <div class="card">
+          <li class="sidebar-list__item">
             <img
-              class="card-img"
+              class="profile-image"
               src="./images/image-kira.jpg"
               alt="profile photo"
             />
-            <div class="card-description">
+            <div class="item__description">
               <h4>Whittle, Kira</h4>
               <p>The agile team project, in particular, was outstanding.</p>
             </div>
-          </div>
+          </li>
 
-          <div class="card">
+          <li class="sidebar-list__item">
             <img
-              class="card-img"
+              class="profile-image"
               src="./images/image-patrick.jpg"
               alt="profile photo"
             />
-            <div class="card-description">
+            <div class="item__description">
               <h4>Abrams, Patrick</h4>
               <p>
                 You will get the personal attention you need from an incredible
                 community of smart and amazing people.
               </p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
       </aside>
 
       <!-- ======== MAIN ========  -->
 
       <main class="main-content">
-        <header class="section-header">
+        <header class="sidebar-header">
           <img
-            class="card-img"
+            class="profile-image"
             src="./images/image-daniel.jpg"
             alt="profile photo"
           />
           <h2>Clifford,Daniel</h2>
         </header>
-        <main class="chat-boxes">
-          <div class="third-person">
+        <main class="chats scroll">
+          <div class="chat__person-third">
             <img
-              class="card-img"
+              class="profile-image"
               src="./images/image-daniel.jpg"
               alt="profile photo"
             />
-            <div class="chat-texts">
+            <div class="person__texts">
               <p>
                 <span>Daniel, Clifford</span><br />Lorem ipsum dolor sit, amet
                 consectetur adipisicing elit.
@@ -203,8 +203,8 @@
               </p>
             </div>
           </div>
-          <div class="first-person">
-            <div class="chat-texts">
+          <div class="chat__person-first">
+            <div class="person__texts">
               <p>Lorem ipsum</p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
@@ -222,13 +222,13 @@
               </p>
             </div>
           </div>
-          <div class="third-person">
+          <div class="chat__person-third">
             <img
-              class="card-img"
+              class="profile-image"
               src="./images/image-daniel.jpg"
               alt="profile photo"
             />
-            <div class="chat-texts">
+            <div class="person__texts">
               <p>
                 <span>Daniel, Clifford</span><br />Lorem ipsum dolor sit, amet
                 consectetur adipisicing elit.
@@ -250,8 +250,8 @@
               </p>
             </div>
           </div>
-          <div class="first-person">
-            <div class="chat-texts">
+          <div class="chat__person-first">
+            <div class="person__texts">
               <p>Lorem ipsum</p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
@@ -273,11 +273,11 @@
         <footer class="new-chat">
           <input
             id="chat-text"
-            value="chat-text"
+            value=""
             type="text"
             placeholder="Type a new message"
           />
-          <div class="chat-tools">
+          <div class="new-chat__tools">
             <div class="tools-left">
               <i class="fa fa-font"></i>
               <i class="fa fa-exclamation"></i>
