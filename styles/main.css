@@ -26,6 +26,7 @@
 
   /* || Colors */
   --color-background: #14141480;
+  --color-bright-light-blue: #6d6da7;
   --color-light-blue: #47476e;
   --color-dark-blue: #343452;
   --color-dark-red: #6d0f17;
@@ -292,10 +293,49 @@ ul {
 }
 
 /* || Main  */
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
 
-.main-content .profile-image {
+}
+
+.header__panel-left,
+.sidebar-nav__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header__panel-left > * {
   margin-right: 0.6rem;
 }
+
+.sidebar-nav__list{
+  color: var(--color-bright-light-gray)
+}
+
+.sidebar-nav__list .list__item {
+  margin-right: 0.6rem;
+  padding: 1.2rem 0;
+}
+
+.sidebar-nav__list .list__item:hover,.list__item:first-child {
+  color: var(--color-white-smoke);
+  border-bottom: 3px solid var(--color-bright-light-blue);
+  margin-bottom: -3px;
+  cursor: pointer;
+}
+
+.sidebar-header .more{
+  color:var(--color-bright-light-gray)
+}
+
+.sidebar-header .more:hover{
+  color: var(--color-light-blue);
+  cursor: pointer;
+}
+
 .chats {
   max-height: 60vh;
   padding: 0 4%;
