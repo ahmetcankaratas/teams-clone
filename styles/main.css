@@ -296,7 +296,6 @@ ul {
 .sidebar-header {
   display: flex;
   justify-content: space-between;
-
 }
 
 .header__panel-left,
@@ -311,8 +310,9 @@ ul {
   margin-right: 0.6rem;
 }
 
-.sidebar-nav__list{
-  color: var(--color-bright-light-gray)
+.sidebar-nav__list {
+  font-size: var(--text-size-sm);
+  color: var(--color-bright-light-gray);
 }
 
 .sidebar-nav__list .list__item {
@@ -320,20 +320,72 @@ ul {
   padding: 1.2rem 0;
 }
 
-.sidebar-nav__list .list__item:hover,.list__item:first-child {
+.sidebar-nav__list .list__item:hover,
+.list__item:first-child {
   color: var(--color-white-smoke);
   border-bottom: 3px solid var(--color-bright-light-blue);
   margin-bottom: -3px;
   cursor: pointer;
 }
 
-.sidebar-header .more{
-  color:var(--color-bright-light-gray)
+.sidebar-header .more {
+  color: var(--color-bright-light-gray);
 }
 
-.sidebar-header .more:hover{
+.sidebar-header .more:hover {
   color: var(--color-light-blue);
   cursor: pointer;
+}
+
+.sidebar-header .header__panel-right {
+  display: flex;
+}
+
+.header__panel-right .panel-right__item {
+  font-size: var(--text-size-sm);
+  height: 1.8rem;
+  width: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.6rem;
+}
+
+.header__panel-right .panel-right__item i {
+  color: var(--color-bright-light-gray);
+  filter: invert(1);
+}
+
+.header__panel-right .panel-right__item i:hover {
+  filter: invert(0);
+  color: var(--color-light-blue);
+  cursor: pointer;
+}
+
+.header__panel-right .panel-right__item:first-child,
+.header__panel-right .panel-right__item:nth-child(2) {
+  border: 1px solid var(--color-bright-light-gray);
+  border-radius: 0.3rem;
+  background-color: #2f2f2f;
+}
+
+.header__panel-right .panel-right__item:first-child:hover,
+.header__panel-right .panel-right__item:nth-child(2):hover{
+  filter: brightness(0.7);
+  cursor: pointer;
+}
+
+.header__panel-right .panel-right__item:first-child {
+  margin: 0;
+  border-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.header__panel-right .panel-right__item:nth-child(2) {
+  margin-right: 0.6rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .chats {
@@ -439,6 +491,11 @@ ul {
   .new-chat .new-chat__tools i:nth-child(odd) {
     display: none;
   }
+
+  .sidebar-nav__list li:not(:first-child){
+    display: none;
+  }
+  
 }
 
 @media screen and (max-width: 570px) {
@@ -446,6 +503,10 @@ ul {
     font-size: var(--text-size-sm);
   }
   .search {
+    display: none;
+  }
+
+  .sidebar-header .header__panel-right{
     display: none;
   }
 }
