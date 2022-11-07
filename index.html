@@ -92,79 +92,95 @@
 
       <aside class="main-aside">
         <header class="sidebar-header">
-          <h1>Chat</h1>
+          <div class="sidebar-header__controls">
+            <div class="header__controls-left">
+              <h1>Chat<i class="fa-solid fa-angle-down"></i></h1>
+            </div>
+            <div class="header__controls-right">
+              <i class="fa-solid fa-filter"></i>
+              <i class="fa-regular fa-pen-to-square"></i>
+            </div>
+          </div>
         </header>
-        <ul class="sidebar-list">
-          <li class="sidebar-list__item">
-            <img
-              class="profile-image"
-              src="./assets/images/image-daniel.jpg"
-              alt="profile photo"
-            />
-            <div class="item__description">
-              <h4>Clifford, Daniel</h4>
-              <p>
-                I signed up for the free intro course and found it incredibly
-                fun!
-              </p>
-            </div>
-          </li>
+        <details class="detailed-list" open>
+          <summary class="detailed-list__summary"><small>Pinned</small></summary>
+          <ul class="sidebar-list">
+            <li class="sidebar-list__item active">
+              <img
+                class="profile-image"
+                src="./assets/images/image-daniel.jpg"
+                alt="profile photo"
+              />
+              <div class="item__description">
+                <h4>Clifford, Daniel</h4>
+                <p>
+                  I signed up for the free intro course and found it incredibly
+                  fun!
+                </p>
+              </div>
+            </li>
+          </ul>
+        </details>
 
-          <li class="sidebar-list__item">
-            <img
-              class="profile-image"
-              src="./assets/images/image-jeanette.jpg"
-              alt="profile photo"
-            />
-            <div class="item__description">
-              <h4>Harmon, Jeanette</h4>
-              <p>This was one of the best investments I’ve made in myself.</p>
-            </div>
-          </li>
+        <details class="detailed-list" open>
+          <summary class="detailed-list__summary"><small>Recent</small></summary>
+          <ul class="sidebar-list">
+            <li class="sidebar-list__item">
+              <img
+                class="profile-image"
+                src="./assets/images/image-jeanette.jpg"
+                alt="profile photo"
+              />
+              <div class="item__description">
+                <h4>Harmon, Jeanette</h4>
+                <p>This was one of the best investments I’ve made in myself.</p>
+              </div>
+            </li>
 
-          <li class="sidebar-list__item">
-            <img
-              class="profile-image"
-              src="./assets/images/image-jonathan.jpg"
-              alt="profile photo"
-            />
-            <div class="item__description">
-              <h4>Walters, Jonathan</h4>
-              <p>
-                Thank you for the wonderful experience! I now have a job I
-                really enjoy, and make a good living while doing something I
-                love.
-              </p>
-            </div>
-          </li>
+            <li class="sidebar-list__item">
+              <img
+                class="profile-image"
+                src="./assets/images/image-jonathan.jpg"
+                alt="profile photo"
+              />
+              <div class="item__description">
+                <h4>Walters, Jonathan</h4>
+                <p>
+                  Thank you for the wonderful experience! I now have a job I
+                  really enjoy, and make a good living while doing something I
+                  love.
+                </p>
+              </div>
+            </li>
 
-          <li class="sidebar-list__item">
-            <img
-              class="profile-image"
-              src="./assets/images/image-kira.jpg"
-              alt="profile photo"
-            />
-            <div class="item__description">
-              <h4>Whittle, Kira</h4>
-              <p>The agile team project, in particular, was outstanding.</p>
-            </div>
-          </li>
+            <li class="sidebar-list__item">
+              <img
+                class="profile-image"
+                src="./assets/images/image-kira.jpg"
+                alt="profile photo"
+              />
+              <div class="item__description">
+                <h4>Whittle, Kira</h4>
+                <p>The agile team project, in particular, was outstanding.</p>
+              </div>
+            </li>
 
-          <li class="sidebar-list__item">
-            <img
-              class="profile-image"
-              src="./assets/images/image-patrick.jpg"
-              alt="profile photo"
-            />
-            <div class="item__description">
-              <h4>Abrams, Patrick</h4>
-              <p>
-                You will get the personal attention you need from an incredible
-                community of smart and amazing people.
-              </p>
-            </div>
-          </li>
-        </ul>
+            <li class="sidebar-list__item">
+              <img
+                class="profile-image"
+                src="./assets/images/image-patrick.jpg"
+                alt="profile photo"
+              />
+              <div class="item__description">
+                <h4>Abrams, Patrick</h4>
+                <p>
+                  You will get the personal attention you need from an
+                  incredible community of smart and amazing people.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </details>
       </aside>
 
       <!-- ======== MAIN ========  -->
@@ -219,8 +235,9 @@
             />
             <div class="person__texts">
               <p>
-                <span>Daniel, Clifford</span><br />Lorem ipsum dolor sit, amet
-                consectetur adipisicing elit.
+                <span class="text__owner">Daniel, Clifford</span>
+                <span class="text__time">21.10 14:32</span><br />Lorem ipsum
+                dolor sit, amet consectetur adipisicing elit.
               </p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
@@ -241,7 +258,7 @@
           </div>
           <div class="chat__person-first">
             <div class="person__texts">
-              <p>Lorem ipsum</p>
+              <p><span class="text__time">21.10 14:32</span>Lorem ipsum</p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
                 dignissimos!olor sit amet consectetur, adipisicing elit. Nostrum
@@ -266,8 +283,9 @@
             />
             <div class="person__texts">
               <p>
-                <span>Daniel, Clifford</span><br />Lorem ipsum dolor sit, amet
-                consectetur adipisicing elit.
+                <span class="text__owner">Daniel, Clifford</span>
+                <span class="text__time">21.10 14:32</span><br />Lorem ipsum
+                dolor sit, amet consectetur adipisicing elit.
               </p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
@@ -288,7 +306,7 @@
           </div>
           <div class="chat__person-first">
             <div class="person__texts">
-              <p>Lorem ipsum</p>
+              <p><span class="text__time">21.10 14:32</span>Lorem ipsum</p>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos,
                 dignissimos!olor sit amet consectetur, adipisicing elit. Nostrum

@@ -247,7 +247,8 @@ ul {
 
 /* || Sidebar */
 
-.sidebar-header {
+.main-aside .sidebar-header,
+.main-content .sidebar-header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -256,6 +257,46 @@ ul {
   font-weight: 800;
   padding-left: 1rem;
   border-bottom: 2px solid var(--color-black);
+}
+
+.main-aside .sidebar-header .sidebar-header__controls {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1rem;
+}
+
+.main-aside .detailed-list .detailed-list__summary,
+.main-aside .sidebar-header .sidebar-header__controls i {
+  font-size: var(--text-size-sm);
+  margin-left: 0.7rem;
+}
+
+.main-aside .detailed-list .detailed-list__summary{
+  margin: 0.7rem;
+  opacity: 75%;
+  cursor: pointer;
+}
+
+.main-aside .detailed-list .detailed-list__summary:hover{
+  opacity: 1;
+}
+
+.main-aside .detailed-list .detailed-list__summary::marker{
+  font-size: x-small;
+}
+
+.main-aside .sidebar-header .sidebar-header__controls i {
+  color: var(--color-bright-light-gray);
+  filter: invert(1);
+}
+
+.main-aside .sidebar-header .sidebar-header__controls i:hover {
+  filter: invert(0);
+  color: var(--color-light-blue);
+  cursor: pointer;
 }
 
 .main-aside .profile-image {
@@ -277,7 +318,7 @@ ul {
   overflow: hidden;
 }
 
-.sidebar-list .sidebar-list__item:nth-child(1),
+.sidebar-list .sidebar-list__item.active,
 .sidebar-list .sidebar-list__item:hover {
   background-color: var(--color-light-gray);
   opacity: 100%;
@@ -293,8 +334,7 @@ ul {
 }
 
 /* || Main  */
-.sidebar-header {
-  display: flex;
+.main-content .sidebar-header {
   justify-content: space-between;
 }
 
@@ -412,10 +452,17 @@ ul {
   background: var(--color-light-gray);
 }
 
-.chats .chat__person-third .person__texts p span {
+.chats .chat__person-third .person__texts p .text__owner {
   font-family: var(--ff-primary-bold);
   font-size: var(--text-size-xs);
   opacity: 75%;
+  margin-right: 0.5rem;
+}
+
+.chats .person__texts p .text__time {
+  font-family: var(--ff-primary);
+  font-size: var(--text-size-xs);
+  opacity: 40%;
 }
 
 .chats .chat__person-first {
@@ -429,6 +476,10 @@ ul {
   margin: 1px;
   border-radius: 5px;
   background-color: var(--color-dark-blue);
+}
+
+.chats .chat__person-first .person__texts p .text__time {
+  display: flex;
 }
 
 .new-chat {
