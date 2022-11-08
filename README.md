@@ -2,7 +2,7 @@
 
 This project is built using HTML5 and CSS3.
 
-LiveURL:
+LiveURL: https://ahmetcankaratas.github.io/teams-clone/
 
 ## **🔎 Technologies**
 
@@ -11,12 +11,7 @@ LiveURL:
 
 ## 📷 Screenshots
 
-Desktop Size
-
-Tablet Size
-
-Mobile Size
-
+![image](https://user-images.githubusercontent.com/53529387/200597555-b26e720f-0cca-4ca5-8ebb-dc67d9030fcd.png)
 
 ## Getting Started
 
@@ -29,13 +24,13 @@ A step by step guide that will tell you how to get the development environment u
 - Clone the repository
 
 ```
-git clone 
+git clone https://ahmetcankaratas.github.io/teams-clone/
 ```
 
 - open directiory
 
 ```
-cd 
+cd teams-clone
 ```
 
 - open index.html
